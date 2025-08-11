@@ -1,4 +1,4 @@
-package com.javarush.entity;
+package com.javarush.entity.lecture_9;
 
 import jakarta.persistence.*;
 import lombok.*;

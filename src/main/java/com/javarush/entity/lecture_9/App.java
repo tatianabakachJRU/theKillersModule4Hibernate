@@ -1,4 +1,4 @@
-package com.javarush.entity;
+package com.javarush.entity.lecture_9;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -6,7 +6,6 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 import java.math.BigDecimal;
-import java.sql.Connection;
 import java.time.LocalDate;
 
 public class App {

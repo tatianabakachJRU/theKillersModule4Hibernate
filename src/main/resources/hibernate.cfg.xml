@@ -22,7 +22,7 @@
         <property name="hbm2ddl.auto">validate</property>
 
         <!-- Регистрация сущности -->
-        <mapping class="com.javarush.entity.User"/>
-        <mapping class="com.javarush.entity.Profile"/>
+        <mapping class="com.javarush.entity.lecture_9.User"/>
+        <mapping class="com.javarush.entity.lecture_9.Profile"/>
     </session-factory>
 </hibernate-configuration>
