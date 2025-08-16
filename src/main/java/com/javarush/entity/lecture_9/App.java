@@ -1,5 +1,6 @@
 package com.javarush.entity.lecture_9;
 
+import com.javarush.entity.lecture_10.examplesHQL.HQLExample_1;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -7,6 +8,7 @@ import org.hibernate.cfg.Configuration;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class App {
     public static void main(String[] args) {
@@ -48,7 +50,21 @@ public class App {
                 }
             }
 
-
+            HQLExample_1 hqlExample1 = new HQLExample_1(sessionFactory);
+            hqlExample1.getAllUsers();
+            hqlExample1.getUserNames();
+            hqlExample1.processUsersAsStream();
+            hqlExample1.activateProfileByEmailDomain("@example.com");
+            hqlExample1.deactivateProfileByEmail("sofia.chen@example.com");
+            hqlExample1.goToUserByPosition(5);
+            hqlExample1.getBioProfilesByUsername("Anna Petrova");
+            ArrayList<String> names = new ArrayList<>();
+            names.add("Anna Petrova");
+            names.add("Alexei Volkov");
+            hqlExample1.findUserByUsernameList(names);
+            hqlExample1.getUsersOrderByUsername();
+            hqlExample1.getMaxHeight();
+            hqlExample1.getUserByEmailNativeQuery("anna.petrova@example.com");
 
         }
     }

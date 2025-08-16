@@ -3,7 +3,20 @@ package com.javarush.entity.lecture_9;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
 
+
+@NamedQueries({
+        @NamedQuery(
+                name = "User.findByEmail",
+                query = "FROM User u WHERE u.email = :email"
+        ),
+        @NamedQuery(
+                name = "User.findAllUsers",
+                query = "FROM User"
+        )
+}
+)
 @Entity
 @Table(name = "users")
 @Getter @Setter
